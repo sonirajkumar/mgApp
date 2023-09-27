@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "8264516027",
+    "project_id": "mgapp-554df",
+    "storage_bucket": "mgapp-554df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8264516027:android:c948c5ddb908c96744049e",
+        "android_client_info": {
+          "package_name": "com.mgApp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLvQxvPVRsQNrEetZ4cuw_u1m2Lb0cjyE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

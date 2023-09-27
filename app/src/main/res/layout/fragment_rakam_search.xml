@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layoutRakamSearchResults"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentRakamSearch">
+
+    <TextView
+        android:id="@+id/textViewSearchResultCustDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_theme_dark_primary"
+        android:textColor="@color/md_theme_light_shadow"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewMobileNumber"
+        android:background="@color/md_theme_light_tertiaryContainer"
+        android:textColor="@color/md_theme_light_shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewAadharNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSearchResultCustDetails" />
+
+
+    <TextView
+        android:id="@+id/textViewAadharNumber"
+        android:background="@color/md_theme_dark_error"
+        android:textColor="@color/md_theme_light_shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewMobileNumber"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSearchResultCustDetails" />
+
+    <Button
+        android:id="@+id/btnEditCustInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/searchRakamEditCustInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAadharNumber" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRakamSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRakamSearchAddRakam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEditCustInfo" />
+
+    <Button
+        android:id="@+id/buttonRakamSearchAddRakam"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_rakam"
+        app:layout_constraintEnd_toStartOf="@+id/btnDeleteCustomer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewRakamSearch" />
+
+    <Button
+        android:id="@+id/btnDeleteCustomer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="50dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:text="@string/rakamSearchDeleteCustomer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonRakamSearchAddRakam"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewRakamSearch" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

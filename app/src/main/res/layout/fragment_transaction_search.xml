@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layoutTransactionSearchResults"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".FragmentRakamSearch">
+
+    <TextView
+        android:id="@+id/textViewTransactionSearchFragmentCustDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_theme_dark_primary"
+        android:textColor="@color/md_theme_light_shadow"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTransactionSearchFragmentMobileNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/md_theme_light_tertiaryContainer"
+        android:textColor="@color/md_theme_light_shadow"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:padding="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTransactionSearchFragmentAadharNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTransactionSearchFragmentCustDetails" />
+
+
+    <TextView
+        android:id="@+id/textViewTransactionSearchFragmentAadharNumber"
+        android:background="@color/md_theme_dark_error"
+        android:textColor="@color/md_theme_light_shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewTransactionSearchFragmentMobileNumber"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTransactionSearchFragmentCustDetails" />
+
+    <TextView
+        android:id="@+id/textViewTransactionSearchFragmentRakamDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="@color/md_theme_light_errorContainer"
+        android:textColor="@color/md_theme_light_shadow"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTransactionSearchFragmentMobileNumber" />
+
+    <TextView
+        android:id="@+id/text_view_rakam_weight_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/md_theme_light_shadow"
+        android:gravity="center"
+        android:background="@color/md_theme_light_outlineVariant"
+        android:padding="10dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTransactionSearchFragmentRakamDetails" />
+
+    <Button
+        android:id="@+id/btnDeleteRakam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:text="@string/tranSearchDeleteRakam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_rakam_weight_number" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTransactionSearch"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCalculateTotalBalance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDeleteRakam" />
+
+    <Button
+        android:id="@+id/buttonCalculateTotalBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/calculate_amount"
+        app:layout_constraintEnd_toStartOf="@+id/btnAddTransaction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewTransactionSearch" />
+
+    <Button
+        android:id="@+id/btnAddTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/add_transaction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonCalculateTotalBalance"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewTransactionSearch" />
+
+    <TextView
+        android:id="@+id/calculatedAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculateTotalBalance" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

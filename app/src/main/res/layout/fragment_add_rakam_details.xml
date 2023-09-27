@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/add_rakam_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".FragmentAddRakam">
+
+        <TextView
+            android:id="@+id/text_view_add_rakam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="@color/md_theme_dark_primary"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/add_rakam"
+            android:textColor="@color/md_theme_light_shadow"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="@color/md_theme_dark_error"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/md_theme_light_shadow"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_add_rakam" />
+
+        <TextView
+            android:id="@+id/tvCidNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/md_theme_light_tertiaryContainer"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/md_theme_light_shadow"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_name"
+            tools:ignore="SmallSp" />
+
+        <RadioGroup
+            android:id="@+id/radioGrpMetalType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:checkedButton="@id/radioBtnSilver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCidNumber">
+
+            <RadioButton
+                android:id="@+id/radioBtnSilver"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bkg"
+                android:text="@string/fragment_add_rakam_metal_type_silver"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="46dp"
+                tools:layout_editor_absoluteY="429dp" />
+
+            <RadioButton
+                android:id="@+id/radioBtnGold"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bkg"
+                android:text="@string/fragment_add_rakam_metal_type_gold"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="54dp"
+                tools:layout_editor_absoluteY="247dp" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/rakam_type"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:autofillHints="name"
+            android:gravity="center"
+            android:background="@drawable/edit_text_bkg"
+            android:hint="@string/rakam_type"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGrpMetalType" />
+
+        <EditText
+            android:id="@+id/net_rakam_weight"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints="number"
+            android:gravity="center"
+            android:background="@drawable/edit_text_bkg"
+            android:hint="@string/fragment_add_rakam_net_weight"
+            android:inputType="number"
+            android:padding="10dp"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rakam_type" />
+
+        <EditText
+            android:id="@+id/rakam_weight"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints="number"
+            android:gravity="center"
+            android:background="@drawable/edit_text_bkg"
+            android:hint="@string/rakam_weight"
+            android:inputType="number"
+            android:padding="10dp"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/net_rakam_weight" />
+
+
+        <Button
+            android:id="@+id/add_rakam_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/add_rakam"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rakam_weight" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

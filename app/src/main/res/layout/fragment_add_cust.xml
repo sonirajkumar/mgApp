@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/add_cust_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".FragmentAddCust">
+
+        <TextView
+            android:id="@+id/text_view_add_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="@color/md_theme_dark_primary"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/create_account"
+            android:textColor="@color/md_theme_light_shadow"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnShowLastCid"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addCustShowLastCid"
+            app:layout_constraintEnd_toStartOf="@+id/tvLastCidNumber"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_add_account" />
+
+        <TextView
+            android:id="@+id/tvLastCidNumber"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/md_theme_light_tertiaryContainer"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/md_theme_light_shadow"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnShowLastCid"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_add_account"
+            tools:ignore="SmallSp" />
+
+        <EditText
+            android:id="@+id/first_name"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:autofillHints="name"
+            android:background="@drawable/edit_text_bkg"
+            android:gravity="center"
+            android:hint="@string/first_name"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLastCidNumber" />
+
+        <EditText
+            android:id="@+id/middle_name"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints="name"
+            android:background="@drawable/edit_text_bkg"
+            android:gravity="center"
+            android:hint="@string/middle_name"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/first_name" />
+
+        <EditText
+            android:id="@+id/last_name"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints="surname"
+            android:background="@drawable/edit_text_bkg"
+            android:gravity="center"
+            android:hint="@string/last_name"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/middle_name" />
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints="city_name"
+            android:background="@drawable/edit_text_bkg"
+            android:gravity="center"
+            android:hint="@string/city"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/last_name" />
+
+        <EditText
+            android:id="@+id/mobile_number"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints="mobile_number"
+            android:background="@drawable/edit_text_bkg"
+            android:gravity="center"
+            android:hint="@string/mobile_number"
+            android:inputType="number"
+            android:padding="10dp"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/city" />
+
+        <EditText
+            android:id="@+id/aadhar_number"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints="aadhar_name"
+            android:background="@drawable/edit_text_bkg"
+            android:gravity="center"
+            android:hint="@string/aadhar_number"
+            android:inputType="text|number"
+            android:padding="10dp"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mobile_number" />
+
+        <EditText
+            android:id="@+id/customer_id"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints="aadhar_name"
+            android:background="@drawable/edit_text_bkg"
+            android:gravity="center"
+            android:hint="@string/et_customer_id"
+            android:inputType="text"
+            android:padding="10dp"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aadhar_number" />
+
+
+        <Button
+            android:id="@+id/add_account_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/add_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customer_id" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

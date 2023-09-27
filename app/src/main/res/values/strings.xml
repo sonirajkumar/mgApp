@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">mgApp</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">Welcome !</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">Login failed</string>
+    <string name="login_success">Login Successful</string>
+    <!-- Strings related to Add account -->
+    <string name="first_name">First Name</string>
+    <string name="create_account">Create Customer Account</string>
+    <string name="middle_name">Middle Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="city">City</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="aadhar_number">Aadhar Number</string>
+    <string name="et_customer_id">Customer ID</string>
+    <string name="addCustShowLastCid">Show Last CID</string>
+
+    <string name="add_account">Add Account</string>
+    <!-- Strings related to Add Rakam -->
+    <string name="add_rakam">Add Rakam</string>
+    <string name="rakam_type">Rakam Type Ex. Kada/Sakli</string>
+    <string name="rakam_weight">Fine Weight in GMS Ex. 1000</string>
+    <!-- Strings related to Add Transaction -->
+    <string name="add_transaction">Add Transactions</string>
+    <string name="naame">Naame</string>
+    <string name="jama">Jama</string>
+    <string name="amount">Amount</string>
+    <string name="ir">IR</string>
+    <string name="remarks">Remarks</string>
+    <string name="add">Add</string>
+    <string name="date">Date (DD/MM/YYYY)</string>
+    <string name="tranType">Type:</string>
+    <string name="tranSearchAmount">Amount: \u20B9</string>
+    <string name="tranSearchIR">IR:</string>
+    <string name="tranSearchDate">Date:</string>
+    <string name="tranSearchRemarks">Remarks:</string>
+    <string name="calculate_amount">Calculate Amount</string>
+    <string name="rakamSearchDeleteCustomer">Delete Customer</string>
+    <string name="tranSearchDeleteRakam">Delete Rakam</string>
+    <string name="searchRakamEditCustInfo">Edit Customer Info</string>
+
+    <string name="home_tv_rakaminloss">Rakam\'s In Loss</string>
+    <string name="home_et_silver_rate">Silver Rate</string>
+    <string name="home_btn_showrakaminloss">Show Rakam In Loss</string>
+    <string name="add_rakam_et_rakam_number">Rakam Number</string>
+    <string name="fragment_menu_log_out">Log Out</string>
+    <string name="fragment_menu_btn_last_transactions">Show Last Transactions</string>
+    <string name="fragment_home_btn_show_total">Show Total</string>
+    <string name="fragment_home_tv_total_amount">Total Amount: \u20B9</string>
+    <string name="fragment_home_tv_total_jama">Total Jama: \u20B9</string>
+    <string name="fragment_home_tv_activeInterest">Active Interest: ₹</string>
+    <string name="fragment_add_rakam_metal_type_silver">Silver</string>
+    <string name="fragment_add_rakam_metal_type_gold">Gold</string>
+    <string name="fragment_home_et_gold_rate">Gold Rate</string>
+    <string name="fragment_add_rakam_net_weight">Net Weight in GMS Ex. 1000</string>
+    <string name="btnBackupData">Backup Data</string>
+</resources>
