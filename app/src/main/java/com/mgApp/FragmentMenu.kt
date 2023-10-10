@@ -59,59 +59,70 @@ class FragmentMenu : Fragment() {
             adapter.notifyDataSetChanged()
 
             db.collection("history").orderBy("timestamp", Query.Direction.ASCENDING).limit(1).get()
-                .addOnSuccessListener { lastCust -> if (!lastCust.isEmpty){
-                    for (ele in lastCust){
-                        lastHistCid = ele.data["cid"].toString()
-                    }
-                }
-                }
-
-            db.collection("history").orderBy("timestamp", Query.Direction.DESCENDING).get()
-                .addOnSuccessListener { custID ->
-                    if (!custID.isEmpty) {
-                        for (ids in custID) {
-                            if (!histCidList.contains(ids.data["cid"].toString().filter { !it.isWhitespace() })){
-                                histCidList.add(ids.data["cid"].toString().filter { !it.isWhitespace() })
-                            }
+                .addOnSuccessListener { lastCust ->
+                    if (!lastCust.isEmpty) {
+                        for (ele in lastCust) {
+                            lastHistCid = ele.data["cid"].toString()
                         }
                     }
-                    db.collection("cust").get().addOnSuccessListener { custIDs ->
-                        if (!custIDs.isEmpty) {
-                            for (ele in histCidList) {
-                                var isEleFound = 0
-                                for (customerDoc in custIDs) {
-                                    if (customerDoc.id.takeLast(ele.length+1) == "_${ele.filter { !it.isWhitespace() }}") {
-                                        isEleFound = 1
-                                        db.collection("cust").document(customerDoc.id).get()
-                                            .addOnSuccessListener { document ->
-                                                custData = DataCustSearch(
-                                                    document.data!!["f_name"].toString(),
-                                                    document.data!!["m_name"].toString(),
-                                                    document.data!!["l_name"].toString(),
-                                                    document.data!!["city"].toString(),
-                                                    document.data!!["mobile_no"].toString(),
-                                                    document.data!!["aadhar_no"].toString(),
-                                                    document.data!!["cid"].toString()
-                                                )
-                                                histCustDetails[ele] = custData
-//                                                if(histCidList.size == histCustDetails.size){
-                                                if (lastHistCid == ele){
-                                                    for (histCust in histCidList){
-                                                        histCustDetails[histCust]?.let { it1 -> custSearchList.add(it1) }
-                                                        adapter.notifyDataSetChanged()
-                                                    }
-                                                }
-//                                                println(histCustDetails.size)
-//                                                println(histCidList.size)
-                                            }
+
+
+                    db.collection("history").orderBy("timestamp", Query.Direction.DESCENDING).get()
+                        .addOnSuccessListener { custID ->
+                            if (!custID.isEmpty) {
+                                for (ids in custID) {
+                                    if (!histCidList.contains(
+                                            ids.data["cid"].toString()
+                                                .filter { !it.isWhitespace() })
+                                    ) {
+                                        histCidList.add(
+                                            ids.data["cid"].toString()
+                                                .filter { !it.isWhitespace() })
                                     }
                                 }
+                            }
+                            db.collection("cust").get().addOnSuccessListener { custIDs ->
+                                if (!custIDs.isEmpty) {
+                                    for (ele in histCidList) {
+//                                        var isEleFound = 0
+                                        for (customerDoc in custIDs) {
+                                            if (customerDoc.id.takeLast(ele.length + 1) == "_${ele.filter { !it.isWhitespace() }}") {
+//                                                isEleFound = 1
+                                                db.collection("cust").document(customerDoc.id).get()
+                                                    .addOnSuccessListener { document ->
+                                                        custData = DataCustSearch(
+                                                            document.data!!["f_name"].toString(),
+                                                            document.data!!["m_name"].toString(),
+                                                            document.data!!["l_name"].toString(),
+                                                            document.data!!["city"].toString(),
+                                                            document.data!!["mobile_no"].toString(),
+                                                            document.data!!["aadhar_no"].toString(),
+                                                            document.data!!["cid"].toString()
+                                                        )
+                                                        histCustDetails[ele] = custData
+//                                                if(histCidList.size == histCustDetails.size){
+                                                        if (lastHistCid == ele) {
+                                                            for (histCust in histCidList) {
+                                                                histCustDetails[histCust]?.let { it1 ->
+                                                                    custSearchList.add(
+                                                                        it1
+                                                                    )
+                                                                }
+                                                                adapter.notifyDataSetChanged()
+                                                            }
+                                                        }
+//                                                println(histCustDetails.size)
+//                                                println(histCidList.size)
+                                                    }
+                                            }
+                                        }
 //                                if (isEleFound==0){
 //                                    println("ele $ele not found")
 //                                }
+                                    }
+                                }
                             }
                         }
-                    }
                 }
 
             db.collection("history").count().get(AggregateSource.SERVER)
