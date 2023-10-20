@@ -1,148 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/home_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".FragmentHome">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvRakamInLoss"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/home_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/md_theme_dark_primary"
-        android:gravity="center"
-        android:text="@string/home_tv_rakaminloss"
-        android:textColor="@color/md_theme_light_shadow"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:context=".FragmentHome">
 
-    <EditText
-        android:id="@+id/etSilverRate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="0dp"
-        android:autofillHints="Silver Rate"
-        android:background="@drawable/edit_text_bkg"
-        android:hint="@string/home_et_silver_rate"
-        android:inputType="number"
-        android:padding="10dp"
-        android:selectAllOnFocus="true"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toStartOf="@+id/etGoldRate"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRakamInLoss" />
+        <ProgressBar
+            android:id="@+id/homeProgressBar"
+            android:visibility="invisible"
+            android:indeterminateTint="@color/md_theme_light_primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
 
-    <EditText
-        android:id="@+id/etGoldRate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="10dp"
-        android:autofillHints="Silver Rate"
-        android:background="@drawable/edit_text_bkg"
-        android:hint="@string/fragment_home_et_gold_rate"
-        android:inputType="number"
-        android:padding="10dp"
-        android:selectAllOnFocus="true"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/etSilverRate"
-        app:layout_constraintTop_toBottomOf="@+id/tvRakamInLoss" />
+        <TextView
+            android:id="@+id/tvRakamInLoss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/md_theme_dark_primary"
+            android:gravity="center"
+            android:text="@string/home_tv_rakaminloss"
+            android:textColor="@color/md_theme_light_shadow"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnShowRakamInLoss"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/home_btn_showrakaminloss"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSilverRate" />
+        <EditText
+            android:id="@+id/etSilverRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:autofillHints="Silver Rate"
+            android:background="@drawable/edit_text_bkg"
+            android:hint="@string/home_et_silver_rate"
+            android:inputType="number"
+            android:padding="10dp"
+            android:selectAllOnFocus="true"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toStartOf="@+id/etGoldRate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRakamInLoss" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvShowRakamInLoss"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnShowTotal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnShowRakamInLoss" />
+        <EditText
+            android:id="@+id/etGoldRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints="Silver Rate"
+            android:background="@drawable/edit_text_bkg"
+            android:hint="@string/fragment_home_et_gold_rate"
+            android:inputType="number"
+            android:padding="10dp"
+            android:selectAllOnFocus="true"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/etSilverRate"
+            app:layout_constraintTop_toBottomOf="@+id/tvRakamInLoss" />
 
-    <Button
-        android:id="@+id/btnShowTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/fragment_home_btn_show_total"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rvShowRakamInLoss" />
+        <Button
+            android:id="@+id/btnShowRakamInLoss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_btn_showrakaminloss"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etSilverRate" />
 
-    <TextView
-        android:id="@+id/tvTotalAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/fragment_home_tv_total_amount"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/tvTotalAmountValue"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnShowTotal" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvShowRakamInLoss"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnShowTotal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnShowRakamInLoss" />
 
-    <TextView
-        android:id="@+id/tvTotalAmountValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/tvTotalAmount"
-        app:layout_constraintTop_toBottomOf="@+id/btnShowTotal" />
+        <Button
+            android:id="@+id/btnShowTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_home_btn_show_total"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvShowRakamInLoss" />
 
-    <TextView
-        android:id="@+id/tvTotalJama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/fragment_home_tv_total_jama"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTotalAmount" />
+        <TextView
+            android:id="@+id/tvTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/fragment_home_tv_total_amount"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvTotalAmountValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnShowTotal" />
 
-    <TextView
-        android:id="@+id/tvTotalJamaValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/tvTotalJama"
-        app:layout_constraintTop_toBottomOf="@+id/tvTotalAmount" />
+        <TextView
+            android:id="@+id/tvTotalAmountValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/tvTotalAmount"
+            app:layout_constraintTop_toBottomOf="@+id/btnShowTotal" />
 
-    <TextView
-        android:id="@+id/tvActiveInterest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/fragment_home_tv_activeInterest"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTotalJama" />
+        <TextView
+            android:id="@+id/tvTotalJama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/fragment_home_tv_total_jama"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTotalAmount" />
 
-    <TextView
-        android:id="@+id/tvActiveInterestValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/tvActiveInterest"
-        app:layout_constraintTop_toBottomOf="@+id/tvTotalJama" />
+        <TextView
+            android:id="@+id/tvTotalJamaValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/tvTotalJama"
+            app:layout_constraintTop_toBottomOf="@+id/tvTotalAmount" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvActiveInterest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/fragment_home_tv_activeInterest"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTotalJama" />
+
+        <TextView
+            android:id="@+id/tvActiveInterestValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/tvActiveInterest"
+            app:layout_constraintTop_toBottomOf="@+id/tvTotalJama" />
+
+        <Button
+            android:id="@+id/btnBackupToFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/btnBackupData"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvActiveInterestValue" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
