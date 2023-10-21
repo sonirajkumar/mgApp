@@ -49,8 +49,6 @@ class FragmentMenu : Fragment() {
         rvCustHistory.layoutManager = LinearLayoutManager(context)
         adapter = AdapterCustSearch(custSearchList)
         rvCustHistory.adapter = adapter
-        custSearchList.clear()
-        adapter.notifyDataSetChanged()
 
         auth = FirebaseAuth.getInstance()
 
