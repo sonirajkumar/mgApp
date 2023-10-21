@@ -113,7 +113,7 @@ class FragmentHome : Fragment() {
                                                         if (!transIDs.isEmpty) {
                                                             for (transDoc in transIDs) {
                                                                 val tempTransString =
-                                                                    transDoc.data["type"].toString().replace(","," ") + "," + transDoc.data["ir"].toString().replace(","," ") + "," + transDoc.data["amount"].toString().replace(","," ") + "," + transDoc.data["date"].toString().replace(","," ") + "," + transDoc.data["remarks"].toString().replace(","," ")
+                                                                    transDoc.data["type"].toString().replace(","," ") + "," + transDoc.data["date"].toString().replace(","," ") + "," + transDoc.data["amount"].toString().replace(","," ") + "," + transDoc.data["ir"].toString().replace(","," ") + "," + transDoc.data["remarks"].toString().replace(","," ")
                                                                 custString += tempCustString + tempRakamString + tempTransString + "\n"
                                                             }
                                                         }
