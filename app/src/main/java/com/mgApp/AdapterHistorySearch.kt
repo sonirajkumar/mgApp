@@ -19,11 +19,11 @@ class AdapterHistorySearch(private val custDataList: List<DataHistorySearch>): R
     }
     inner class CustDataViewHolder(private val custDataBinding: HistoryCustItemsBinding): RecyclerView.ViewHolder(custDataBinding.root){
         fun bindCustData(dataItem: DataHistorySearch){
-            val custDataText = dataItem.fName + " " +
+            val custDataText = "(" +dataItem.cid + ")" +
+                    dataItem.fName + " " +
                     dataItem.mName + " " +
                     dataItem.lName + " " +
-                    dataItem.city + " (" +
-                    dataItem.cid + ")"
+                    dataItem.city
 
             custDataBinding.HistorySearchDetails.text = custDataText
         }
