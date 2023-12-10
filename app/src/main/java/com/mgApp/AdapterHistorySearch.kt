@@ -38,12 +38,12 @@ class AdapterHistorySearch(private val custDataList: List<DataHistorySearch>): R
         }
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        if (viewType == ITEM_WITH_DATE){
+        return if (viewType == ITEM_WITH_DATE){
             val binding = HistoryDateItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-            return DateViewHolder(binding)
+            DateViewHolder(binding)
         }else{
             val binding = HistoryCustItemsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-            return CustDataViewHolder(binding)
+            CustDataViewHolder(binding)
         }
     }
 
