@@ -32,6 +32,8 @@
         android:layout_height="wrap_content"
         android:background="@color/md_theme_light_tertiaryContainer"
         android:textColor="@color/md_theme_light_shadow"
+        android:autoLink="phone"
+        android:linksClickable="true"
         android:gravity="center"
         android:textStyle="bold"
         android:padding="10dp"
