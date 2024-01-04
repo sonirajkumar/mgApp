@@ -33,6 +33,8 @@
         android:textColor="@color/md_theme_light_shadow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autoLink="phone"
+        android:linksClickable="true"
         android:gravity="center"
         android:textStyle="bold"
         android:layout_marginTop="4dp"
