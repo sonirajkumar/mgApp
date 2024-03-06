@@ -39,8 +39,6 @@ class FragmentCustSearch : Fragment() {
         custSearchView = binding.searchView
         adapter = AdapterCustSearch(custSearchList)
         recyclerView.adapter = adapter
-        custSearchList.clear()
-        adapter.notifyDataSetChanged()
 
         custSearchView.setOnQueryTextListener(object: OnQueryTextListener{
             @SuppressLint("NotifyDataSetChanged")
